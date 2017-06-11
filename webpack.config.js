@@ -39,7 +39,7 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Idle Hacker',
+            title: 'React Redux Hot Starter',
             filename: 'index.html',
             template: './app/app.html',
             minify: {

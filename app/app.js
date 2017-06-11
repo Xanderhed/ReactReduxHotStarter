@@ -1,22 +1,15 @@
 import css from './app.css';
 
 import React from 'react';
-import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import { Router, Route, browserHistory } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux';
+import { Router, Route } from 'react-router';
 
-import reducers from './reducers';
 import Index from './components/index';
-
-const store = createStore(reducers, applyMiddleware(thunk));
-const history = syncHistoryWithStore(browserHistory, store);
 
 const App = (props) => {
     return (
-        <Provider store={store}>
-            <Router history={history}>
+        <Provider store={props.store}>
+            <Router history={props.history}>
                 <Route path="/" component={Index}/>
             </Router>
         </Provider>
