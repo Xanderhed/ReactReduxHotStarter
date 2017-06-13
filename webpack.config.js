@@ -12,7 +12,7 @@ const cssProd = ExtractTextPlugin.extract({
 });
 
 module.exports = {
-    entry: [ 'react-hot-loader/patch', './app/index.js' ],
+    entry: [ 'react-hot-loader/patch', './app/app.js' ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js'
